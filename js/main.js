@@ -37,7 +37,7 @@ let resultado = document.getElementById("resultado");
 btnCalcular.addEventListener("click", function(event){
     event.preventDefault();
     console.log(data.value);
-    resultado.innerHTML = "Resultado: " +calculateAge(data.value);
+    resultado.innerHTML = "<strong>Resultado: </strong>" +calculateAge(data.value);
 });
 
 function calculateAge (yearOfBirth){
