@@ -1,4 +1,4 @@
-//let cont=0;
+/* //let cont=0;
 //let nombre="Alberto";
 //let edad=29;
 //let x=20;
@@ -26,3 +26,31 @@ function currentYear(){
 }//currentYear
 
 console.log("!Hola, Javascript externo!");
+*/
+
+console.log("Calculadora de edad");
+
+let data = document.getElementById("txtData");
+let btnCalcular = document.getElementById("btnCalcular");
+let resultado = document.getElementById("resultado");
+
+btnCalcular.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log(data.value);
+    resultado.innerHTML = "Resultado: " +calculateAge(data.value);
+});
+
+function calculateAge (yearOfBirth){
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    return currentYear-yearOfBirth;
+    //calculateAge
+}
+
+function calculateAge1 (yearOfBirth, month, day){
+    let d = new Date();
+    let birth= new Date(yearOfBirth, month-1, day);
+    let age= new Date();
+        age-SVGFEDistantLightElement(d.getTime()-birth.getTime());
+    return age;
+}
