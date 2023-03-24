@@ -17,7 +17,13 @@ btnCalcular.addEventListener("click", function(event){
     // Imprime la fecha de nacimiento en la consola
     console.log(data.value);
     // Muestra el resultado de la edad en la página web
-    resultado.innerHTML ="<strong>Resultado: </strong>"+calculateAge(data.value);
+    let msg="";
+    if (calculateAge(data.value)>18) {
+        msg="<strong>¡Bienvenide!</strong>"
+    }   else {
+        msg="<strong>Gracias por participar... :c</strong>"
+    } //Condicional
+    resultado.innerHTML = msg;
 });
 
 // Define la función "calculateAge" que toma como argumento el año de nacimiento
